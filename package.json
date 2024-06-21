@@ -1,6 +1,6 @@
 {
   "name": "crx-upload",
-  "version": "0.12.13",
+  "version": "0.12.14",
   "description": "A tool for deploying WebExtensions to multiple stores.",
   "type": "module",
   "typesVersions": {
@@ -66,25 +66,25 @@
     ]
   },
   "devDependencies": {
-    "@eslint/js": "^9.5.0",
+    "@eslint/js": "^9.0.0",
     "@types/chrome-webstore-upload": "^1.0.0",
     "@types/jsonwebtoken": "^9.0.6",
-    "@types/node": "^20.14.7",
+    "@types/node": "^20.12.7",
     "@types/yargs": "^17.0.32",
-    "eslint": "^9.5.0",
+    "eslint": "^9.0.0",
     "eslint-config-avi12": "github:avi12/eslint-config-avi12",
     "eslint-config-prettier": "^9.1.0",
-    "globals": "^15.6.0",
-    "lint-staged": "^15.2.7",
-    "nodemon": "^3.1.4",
-    "prettier": "^3.3.2",
-    "rimraf": "^5.0.7",
-    "typescript": "^5.5.2",
-    "typescript-eslint": "^7.13.1",
-    "vite-node": "^1.6.0"
+    "globals": "^15.0.0",
+    "lint-staged": "^15.2.2",
+    "nodemon": "^3.1.0",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.7.0",
+    "vite-node": "^1.5.0"
   },
   "dependencies": {
-    "axios": "^1.7.2",
+    "axios": "^1.6.8",
     "chalk": "^5.3.0",
     "change-case": "^5.4.4",
     "chrome-webstore-upload": "^3.1.0",
@@ -93,7 +93,7 @@
     "fetch-blob": "^4.0.0",
     "form-data": "^4.0.0",
     "jsonwebtoken": "^9.0.2",
-    "playwright": "^1.44.1",
+    "playwright": "^1.43.1",
     "yargs": "^17.7.2",
     "zip-local": "^0.3.5"
   }
