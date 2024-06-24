@@ -2,10 +2,10 @@ import deployToOpera from "./opera-deploy.js";
 import { getCorrectZip, getFullPath, getIsFileExists } from "../../utils.js";
 
 export class OperaOptions {
-  /** The `sessionid` cookie to login to the publisher's account. If you have a hard time obtaining it, run: `web-ext-deploy --get-cookies=opera` */
+  /** The `sessionid` cookie to login to the publisher's account. If you have a hard time obtaining it, run: `crx-upload --get-cookies=opera` */
   sessionid: string;
 
-  /** The `csrftoken` cookie to upload the ZIP. If you have a hard time obtaining it, run: `web-ext-deploy --get-cookies=opera` */
+  /** The `csrftoken` cookie to upload the ZIP. If you have a hard time obtaining it, run: `crx-upload --get-cookies=opera` */
   csrftoken: string;
 
   /** The extension ID. E.g. `https://addons.opera.com/developer/package/PACKAGE_ID` */
@@ -37,7 +37,7 @@ export class OperaOptions {
       throw new Error(
         getErrorMessage(
           `No "sessionid" is provided. If you have a hard time obtaining it, run:
-web-ext-deploy --get-cookies=opera`
+crx-upload --get-cookies=opera`
         )
       );
     }
@@ -46,7 +46,7 @@ web-ext-deploy --get-cookies=opera`
       throw new Error(
         getErrorMessage(
           `No "csrftoken" is provided. If you have a hard time obtaining it, run:
-web-ext-deploy --get-cookies=opera`
+crx-upload --get-cookies=opera`
         )
       );
     }

@@ -2,7 +2,7 @@
 
 The ultimate automation tool for deploying to multiple extension stores simultaneously!
 
-Made by [avi12](https://avi12.com)
+Made by [leizhenpeng](https://leizhenpeng.com)
 
 Supported stores:
 
@@ -33,25 +33,25 @@ Supported stores:
 # Installing
 
 ```shell
-npm i -D web-ext-deploy
+npm i -D crx-upload
 # or
-pnpm i -D web-ext-deploy
+pnpm i -D crx-upload
 # or
-yarn add -D web-ext-deploy
+yarn add -D crx-upload
 ```
 
 or install globally
 
 ```shell
-npm i -g web-ext-deploy
+npm i -g crx-upload
 # or
-pnpm i -g web-ext-deploy
+pnpm i -g crx-upload
 # or
-yarn global add web-ext-deploy
+yarn global add crx-upload
 ```
 
 Deployment to Chrome Web Store: [follow this guide](https://github.com/DrewML/chrome-webstore-upload/blob/main/How%20to%20generate%20Google%20API%20keys.md).
-Deployment to Edge Add-ons Store: [follow this guide](https://github.com/avi12/web-ext-deploy/blob/main/EDGE_PUBLISH_API.md).
+Deployment to Edge Add-ons Store: [follow this guide](https://github.com/leizhenpeng/crx-upload/blob/main/EDGE_PUBLISH_API.md).
 
 # Usage
 
@@ -64,7 +64,7 @@ Deployment to Edge Add-ons Store: [follow this guide](https://github.com/avi12/w
 If you have a hard time obtaining the cookie(s), you can run:
 
 ```shell
-web-ext-deploy --get-cookies=opera
+crx-upload --get-cookies=opera
 ```
 
 Note that for the Chrome Web Store, you'll use the Chrome Web Store Publish API.
@@ -86,7 +86,7 @@ Note that if you used the aforementioned `--get-cookies`, it automatically added
 To use the `.env` files, in the CLI:
 
 ```shell
-web-ext-deploy --env
+crx-upload --env
 ```
 
 ### Additional arguments for the `.env` mode:
@@ -99,7 +99,7 @@ web-ext-deploy --env
   E.g. if you have `chrome.env`, `firefox.env`, `opera.env`, and you run:
 
   ```shell
-  web-ext-deploy --env --publish-only=chrome firefox
+  crx-upload --env --publish-only=chrome firefox
   ```
 
   It will only deploy to Chrome Web Store and Firefox Add-ons Store.
@@ -139,7 +139,7 @@ web-ext-deploy --env
 
 - Edge Add-ons store:
 
-  - `CLIENT_ID`, `CLIENT_SECRET`, `ACCESS_TOKEN_URL`, `ACCESS_TOKEN` - follow [this guide](https://github.com/avi12/web-ext-deploy/blob/main/EDGE_PUBLISH_API.md)
+  - `CLIENT_ID`, `CLIENT_SECRET`, `ACCESS_TOKEN_URL`, `ACCESS_TOKEN` - follow [this guide](https://github.com/leizhenpeng/crx-upload/blob/main/EDGE_PUBLISH_API.md)
   - `PRODUCT_ID` - Get it from `https://partner.microsoft.com/en-us/dashboard/microsoftedge/PRODUCT_ID`
   - `ZIP` - You can use `{version}`
 
@@ -200,7 +200,7 @@ PACKAGE_ID=123456
 Use it only if your extension's code will not be published.
 
 ```shell
-web-ext-deploy --chrome-zip="some-zip-v{version}.zip" --chrome-ext-id="ExtensionID" --firefox-zip="some-zip-v{version}.zip" --firefox-ext-id="ExtensionID"
+crx-upload --chrome-zip="some-zip-v{version}.zip" --chrome-ext-id="ExtensionID" --firefox-zip="some-zip-v{version}.zip" --firefox-ext-id="ExtensionID"
 ```
 
 ### CLI API
@@ -222,7 +222,7 @@ Options:
   For example, in
 
   ```shell
-  web-ext-deploy --zip="zip-v{version}.zip" --chrome-refresh-token="refreshToken" --firefox-sessionid="sessionid_value" --edge-zip="some-zip-v{version}.zip"
+  crx-upload --zip="zip-v{version}.zip" --chrome-refresh-token="refreshToken" --firefox-sessionid="sessionid_value" --edge-zip="some-zip-v{version}.zip"
   ```
 
   the `zip-v{version}.zip` will be used for the Chrome Web Store version _and_ the Firefox Add-ons version.
@@ -245,7 +245,7 @@ To get your `--chrome-refresh-token`, `--chrome-client-id` and `--chrome-client-
  Example:
 
 ```shell
-web-ext-deploy --chrome-ext-id="ExtensionID" --chrome-refresh-token="RefreshToken" --chrome-client-id="ClientID" --chrome-client-secret="ClientSecret" --chrome-zip="some-zip-v{version}.zip"
+crx-upload --chrome-ext-id="ExtensionID" --chrome-refresh-token="RefreshToken" --chrome-client-id="ClientID" --chrome-client-secret="ClientSecret" --chrome-zip="some-zip-v{version}.zip"
 ```
 
 #### Firefox Add-ons CLI
@@ -275,7 +275,7 @@ Get your `--firefox-jwt-issuer` and `--firefox-jwt-secret` from the [Developer H
 Example:
 
 ```shell
-web-ext-deploy --firefox-ext-id="ExtensionID" --firefox-jwt-issuer="JwtIssuer" --firefox-jwt-secret="JwtSecret" --firefox-zip="dist/some-zip-v{version}.zip" --firefox-changelog="Changelog\nWith line breaks" --firefox-dev-changelog="Changelog for reviewers\nWith line breaks"
+crx-upload --firefox-ext-id="ExtensionID" --firefox-jwt-issuer="JwtIssuer" --firefox-jwt-secret="JwtSecret" --firefox-zip="dist/some-zip-v{version}.zip" --firefox-changelog="Changelog\nWith line breaks" --firefox-dev-changelog="Changelog for reviewers\nWith line breaks"
 ```
 
 #### Edge Add-ons CLI
@@ -297,12 +297,12 @@ web-ext-deploy --firefox-ext-id="ExtensionID" --firefox-jwt-issuer="JwtIssuer" -
   The technical changes made in this version, which will be seen by the Edge Add-ons reviewers.
   You can use `\n` for new lines.
 
-To get your `--edge-access-token`, `--edge-client-id`, `--edge-client-secret`, `--edge-access-token-url`, follow [this guide](https://github.com/avi12/web-ext-deploy/blob/main/EDGE_PUBLISH_API.md).
+To get your `--edge-access-token`, `--edge-client-id`, `--edge-client-secret`, `--edge-access-token-url`, follow [this guide](https://github.com/leizhenpeng/crx-upload/blob/main/EDGE_PUBLISH_API.md).
 
 Example:
 
 ```shell
-web-ext-deploy --edge-product-id="ProductID" --edge-access-token="accessToken value" --edge-client-id="clientId" --edge-client-secret="clientSecret" --edge-access-token-url="accessTokenUrl" --edge-zip="dist/some-zip-v{version}.zip" --edge-dev-changelog="Changelog for reviewers\nWith line breaks"
+crx-upload --edge-product-id="ProductID" --edge-access-token="accessToken value" --edge-client-id="clientId" --edge-client-secret="clientSecret" --edge-access-token-url="accessTokenUrl" --edge-zip="dist/some-zip-v{version}.zip" --edge-dev-changelog="Changelog for reviewers\nWith line breaks"
 ```
 
 **Note:**
@@ -327,7 +327,7 @@ Therefore, expect for longer wait times if you run the tool on an extension you 
 Example:
 
 ```shell
-web-ext-deploy --opera-package-id=123456 --opera-sessionid="sessionid_value" --opera-csrftoken="csrftoken_value" --opera-zip="dist/some-zip-v{version}.zip" --opera-changelog="Changelog\nWith line breaks"
+crx-upload --opera-package-id=123456 --opera-sessionid="sessionid_value" --opera-csrftoken="csrftoken_value" --opera-zip="dist/some-zip-v{version}.zip" --opera-changelog="Changelog\nWith line breaks"
 ```
 
 **Notes:**
@@ -346,7 +346,7 @@ web-ext-deploy --opera-package-id=123456 --opera-sessionid="sessionid_value" --o
 ### ESM
 
 ```ts
-import { deployChrome, deployFirefoxSubmissionApi, deployEdgePublishApi, deployOpera } from "web-ext-deploy";
+import { deployChrome, deployFirefoxSubmissionApi, deployEdgePublishApi, deployOpera } from "crx-upload";
 ```
 
 ### Node.js API
@@ -437,7 +437,7 @@ Options:
 - `verbose` boolean?
   If `true`, every step of uploading to the Edge Add-ons will be logged to the console.
 
-To get your `accessToken`, `clientId`, `clientSecret`, and `accessTokenUrl`, follow [this guide](https://github.com/avi12/web-ext-deploy/blob/main/EDGE_PUBLISH_API.md).
+To get your `accessToken`, `clientId`, `clientSecret`, and `accessTokenUrl`, follow [this guide](https://github.com/leizhenpeng/crx-upload/blob/main/EDGE_PUBLISH_API.md).
 Returns `Promise<true>` or throws an exception.
 
 **Note:**
@@ -467,7 +467,7 @@ Options:
 If you have a hard time obtaining the values of the cookies `sessionid` and `csrftoken`, you can run:
 
 ```shell
-web-ext-deploy --get-cookies=opera
+crx-upload --get-cookies=opera
 ```
 
 Returns `Promise<true>` or throws an exception.
@@ -487,7 +487,7 @@ Returns `Promise<true>` or throws an exception.
 Examples:
 
 ```ts
-import { deployChrome, deployFirefoxSubmissionApi, deployEdgePublishApi, deployOpera } from "web-ext-deploy";
+import { deployChrome, deployFirefoxSubmissionApi, deployEdgePublishApi, deployOpera } from "crx-upload";
 
 deployChrome({
   extId: "ExtensionID",

@@ -4,25 +4,25 @@ import { getCorrectZip, getFullPath, getIsFileExists } from "../../utils.js";
 export class EdgeOptionsPublishApi {
   /**
    * The client ID.<br>
-   * To obtain it, follow [these steps](https://github.com/avi12/web-ext-deploy/blob/main/EDGE_PUBLISH_API.md).
+   * To obtain it, follow [these steps](https://github.com/leizhenpeng/crx-upload/blob/main/EDGE_PUBLISH_API.md).
    */
   clientId: string;
 
   /**
    * The client secret.<br>
-   * To obtain it, follow [these steps](https://github.com/avi12/web-ext-deploy/blob/main/EDGE_PUBLISH_API.md).
+   * To obtain it, follow [these steps](https://github.com/leizhenpeng/crx-upload/blob/main/EDGE_PUBLISH_API.md).
    */
   clientSecret: string;
 
   /**
    * The access token URL.<br>
-   * To obtain it, follow [these steps](https://github.com/avi12/web-ext-deploy/blob/main/EDGE_PUBLISH_API.md).
+   * To obtain it, follow [these steps](https://github.com/leizhenpeng/crx-upload/blob/main/EDGE_PUBLISH_API.md).
    */
   accessTokenUrl: string;
 
   /**
    * The access token.<br>
-   * To obtain it, follow [these steps](https://github.com/avi12/web-ext-deploy/blob/main/EDGE_PUBLISH_API.md).
+   * To obtain it, follow [these steps](https://github.com/leizhenpeng/crx-upload/blob/main/EDGE_PUBLISH_API.md).
    */
   accessToken: string;
 
@@ -54,7 +54,7 @@ export class EdgeOptionsPublishApi {
       );
     }
 
-    const messageObtain = "To obtain one, follow https://github.com/avi12/web-ext-deploy/blob/main/EDGE_PUBLISH_API.md";
+    const messageObtain = "To obtain one, follow https://github.com/leizhenpeng/crx-upload/blob/main/EDGE_PUBLISH_API.md";
 
     if (!options.clientId) {
       throw new Error(getErrorMessage(`No client ID is provided. ${messageObtain}`));

@@ -11,7 +11,7 @@ import { Stores, SupportedGetCookies, SupportedStores } from "./types.js";
 import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
-const isUseCli = Boolean(__filename.match(/web-ext-deploy(?:[\\/](?:dist-esm|src)[\\/]index\.(?:ts|js))?$/));
+const isUseCli = Boolean(__filename.match(/crx-upload(?:[\\/](?:dist-esm|src)[\\/]index\.(?:ts|js))?$/));
 
 const argv = yargs(process.argv.slice(2))
   .options({

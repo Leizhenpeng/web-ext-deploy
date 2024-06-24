@@ -1,12 +1,12 @@
 import eslint from "@eslint/js";
-import avi12 from "eslint-config-avi12";
+import leizhenpeng from "eslint-config-leizhenpeng";
 import globals from "globals";
 import tsEslint from "typescript-eslint";
 
 export default [
   eslint.configs.recommended,
   ...tsEslint.configs.recommended,
-  ...avi12,
+  ...leizhenpeng,
   {
     files: ["**/*.ts"],
     languageOptions: {

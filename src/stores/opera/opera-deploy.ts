@@ -86,7 +86,7 @@ async function openRelevantExtensionPage({
             getVerboseMessage({
               store: STORE,
               message:
-                "Invalid/expired authentication cookie. Please get a new one, e.g. by running: web-ext-deploy --get-cookies=opera",
+                "Invalid/expired authentication cookie. Please get a new one, e.g. by running: crx-upload --get-cookies=opera",
               prefix: "Error"
             })
           );

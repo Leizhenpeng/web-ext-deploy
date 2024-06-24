@@ -63,9 +63,9 @@ importers:
       eslint:
         specifier: ^9.0.0
         version: 9.5.0
-      eslint-config-avi12:
-        specifier: github:avi12/eslint-config-avi12
-        version: https://codeload.github.com/avi12/eslint-config-avi12/tar.gz/304a72628937ac2a2b4d9e3359299c6aa0b9a729(eslint@9.5.0)(typescript@5.5.2)
+      eslint-config-leizhenpeng:
+        specifier: github:leizhenpeng/eslint-config-leizhenpeng
+        version: https://codeload.github.com/leizhenpeng/eslint-config-leizhenpeng/tar.gz/304a72628937ac2a2b4d9e3359299c6aa0b9a729(eslint@9.5.0)(typescript@5.5.2)
       eslint-config-prettier:
         specifier: ^9.1.0
         version: 9.1.0(eslint@9.5.0)
@@ -765,8 +765,8 @@ packages:
     peerDependencies:
       eslint: '>=6.0.0'
 
-  eslint-config-avi12@https://codeload.github.com/avi12/eslint-config-avi12/tar.gz/304a72628937ac2a2b4d9e3359299c6aa0b9a729:
-    resolution: {tarball: https://codeload.github.com/avi12/eslint-config-avi12/tar.gz/304a72628937ac2a2b4d9e3359299c6aa0b9a729}
+  eslint-config-leizhenpeng@https://codeload.github.com/leizhenpeng/eslint-config-leizhenpeng/tar.gz/304a72628937ac2a2b4d9e3359299c6aa0b9a729:
+    resolution: {tarball: https://codeload.github.com/leizhenpeng/eslint-config-leizhenpeng/tar.gz/304a72628937ac2a2b4d9e3359299c6aa0b9a729}
     version: 0.0.0
     peerDependencies:
       '@typescript-eslint/eslint-plugin': latest
@@ -2531,7 +2531,7 @@ snapshots:
       eslint: 9.5.0
       semver: 7.6.2
 
-  eslint-config-avi12@https://codeload.github.com/avi12/eslint-config-avi12/tar.gz/304a72628937ac2a2b4d9e3359299c6aa0b9a729(eslint@9.5.0)(typescript@5.5.2):
+  eslint-config-leizhenpeng@https://codeload.github.com/leizhenpeng/eslint-config-leizhenpeng/tar.gz/304a72628937ac2a2b4d9e3359299c6aa0b9a729(eslint@9.5.0)(typescript@5.5.2):
     dependencies:
       '@stylistic/eslint-plugin-js': 2.2.2(eslint@9.5.0)
       '@typescript-eslint/parser': 7.13.1(eslint@9.5.0)(typescript@5.5.2)

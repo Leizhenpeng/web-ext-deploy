@@ -1,6 +1,6 @@
 {
   "name": "crx-upload",
-  "version": "0.12.15",
+  "version": "0.12.18",
   "description": "A tool for deploying WebExtensions to multiple stores.",
   "type": "module",
   "typesVersions": {
@@ -11,17 +11,16 @@
     }
   },
   "bin": {
-    "web-ext-deploy": "dist-esm/index.js",
     "crx-upload": "dist-esm/index.js"
   },
   "types": "./dist-esm/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/leizhenpeng/web-ext-deploy"
+    "url": "https://github.com/leizhenpeng/crx-upload"
   },
   "keywords": [
     "web-ext",
-    "web-ext-deploy",
+    "crx-upload",
     "web-ext-publish",
     "chrome-deploy",
     "chrome-publish",
@@ -72,7 +71,7 @@
     "@types/node": "^20.12.7",
     "@types/yargs": "^17.0.32",
     "eslint": "^9.0.0",
-    "eslint-config-avi12": "github:avi12/eslint-config-avi12",
+    "eslint-config-leizhenpeng": "github:leizhenpeng/eslint-config-leizhenpeng",
     "eslint-config-prettier": "^9.1.0",
     "globals": "^15.0.0",
     "lint-staged": "^15.2.2",
